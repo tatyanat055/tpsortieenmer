@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un Compte</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <%- include('navbar') %>
+
+    <section id="compte">
+        <div class="container">
+            <h2>Créer un Compte Client</h2>
+            <form action="/compte" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" required>
+
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required>
+
+                <button type="submit">Créer un Compte</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
+
+

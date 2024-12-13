@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorties en Mer - Mayotte</title>
+    <!-- Lien vers la feuille de style CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- En-tête de la page -->
+    <header class="header">
+        <div class="container">
+            <h1>Sorties en Mer à Mayotte</h1>
+            <p>Explorez les eaux turquoise et les trésors marins de Mayotte</p>
+        </div>
+    </header>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#accueil">Accueil</a></li> <!-- Lien vers la section Accueil -->
+            <li><a href="compteclient.ejs">Créer un Compte</a></li> <!-- Lien vers la section Création de compte -->
+            <li><a href="offres.ejs">Offres de Sorties</a></li> <!-- Lien vers les offres -->
+            <li><a href="reservation.ejs">Réserver une Sortie</a></li> <!-- Lien vers la réservation -->
+            <li><a href="contact.ejs">Contact</a></li> <!-- Lien vers la section contact -->
+        </ul>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="section">
+        <div class="container">
+            <h2>Bienvenue à bord</h2>
+            <!-- Description de la section -->
+            <p>Le lagon de Mayotte, véritable joyau de l'océan Indien, 
+                est une merveille de la nature qui séduit par sa beauté exceptionnelle. 
+                Enserré par l'une des plus grandes barrières de corail au monde,
+                ce lagon offre des eaux cristallines aux nuances turquoise et émeraude,
+                a britant une biodiversité marine d'une richesse incroyable. 
+                Ses îlots, tels que l'îlot de Sable Blanc ou l'îlot Bandrélé, sont des paradis intacts où le sable fin et les palmiers 
+                forment un tableau idyllique. Ces lieux enchanteurs invitent à l'évasion, à l'exploration et à la contemplation,
+                révélant la splendeur et la sérénité unique de Mayotte.
+                Embarquez pour une aventure inoubliable sur les eaux cristallines de Mayotte. Découvrez la beauté de ses lagons, ses récifs coralliens, et ses dauphins.</p>
+            <!-- Image représentative -->
+            <img src="yt.jpg" alt="Sortie en mer à Mayotte">
+        </div>
+    </section>
+
+    <!-- Section Création de compte -->
+    <section id="compte" class="section">
+        <div class="container">
+            <h2>Créer un Compte Client</h2>
+            <!-- Formulaire de création de compte -->
+            <form action="/creer-compte" method="POST" class="formulaire">
+                <label for="nom">Nom :</label> <!-- Champ pour le nom -->
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="prenom">Prénom :</label> <!-- Champ pour le prénom -->
+                <input type="text" id="prenom" name="prenom" required>
+
+                <label for="adresse">Adresse :</label> <!-- Champ pour l'adresse -->
+                <input type="text" id="adresse" name="adresse" required>
+
+                <label for="telephone">Numéro de téléphone :</label> <!-- Champ pour le téléphone -->
+                <input type="tel" id="telephone" name="telephone" required>
+
+                <button type="submit">Créer un Compte</button> <!-- Bouton pour envoyer le formulaire -->
+            </form>
+        </div>
+    </section>
+
+    <!-- Section Offres de Sorties -->
+    <section id="offres" class="section">
+        <div class="container">
+            <h2>Nos Offres de Sorties</h2>
+            <!-- Une première offre -->
+            <div class="offre">
+                <h3>Excursion au Lagon</h3> <!-- Titre de l'offre -->
+                <p>Date : 12 Décembre 2024</p> <!-- Date prévue -->
+                <p>Nombre de personnes max : 15</p> <!-- Limite supérieure -->
+                <p>Nombre de personnes min : 5</p> <!-- Limite inférieure -->
+            </div>
+            <!-- Une deuxième offre -->
+            <div class="offre">
+                <h3>Sortie Observation des Dauphins</h3>
+                <p>Date : 18 Décembre 2024</p>
+                <p>Nombre de personnes max : 20</p>
+                <p>Nombre de personnes min : 6</p>
+            </div>
+        </div>
+        <!-- Une troisième offre -->
+        <div class="offre">
+            <h3>Sortie tour de l'océan </h3>
+            <p>Date : 25 Décembre 2024</p>
+            <p>Nombre de personnes max : 15</p>
+            <p>Nombre de personnes min : 9</p>
+        </div>
+        <!-- Une quatrième offre -->
+        <div class="offre">
+            <h3>Sortie ilots </h3>
+            <p>Date : 28 Décembre 2024</p>
+            <p>Nombre de personnes max : 25</p>
+            <p>Nombre de personnes min : 11</p>
+        </div>
+    </section>
+
+    <!-- Section Réservation -->
+    <section id="reserver" class="section">
+        <div class="container">
+            <h2>Réserver une Sortie</h2>
+            <!-- Formulaire de réservation -->
+            <form action="/reserver" method="POST" class="formulaire">
+                <label for="nom">Nom :</label> <!-- Champ pour le nom -->
+                <input type="text" id="nom" name="nom" required>
+
+                <label for="prenom">Prénom :</label> <!-- Champ pour le prénom -->
+                <input type="text" id="prenom" name="prenom" required>
+
+                <label for="offre">Choisissez une sortie :</label> <!-- Menu déroulant pour choisir une offre -->
+                <select id="offre" name="offre" required>
+                    <option value="excursion-lagon">Excursion au Lagon</option>
+                    <option value="observation-dauphins">Observation des Dauphins</option>
+                </select>
+
+                <label for="nombre">Nombre de personnes :</label> <!-- Champ pour le nombre de participants -->
+                <input type="number" id="nombre" name="nombre" min="1" required>
+
+                <button type="submit">Réserver</button> <!-- Bouton pour soumettre le formulaire -->
+            </form>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <!-- Informations de contact -->
+            <p>Email : sorties@mayotte.yt</p>
+            <p>Fax : 0269 63 10 91</p>
+            <p>Téléphone : 0639 25 43 78</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif; /* Police du texte */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Couleur de fond bleu clair */
+    color: #00264d; /* Texte bleu marine */
+}
+
+/* Styles pour les sections */
+.section {
+    padding: 2rem 1rem; /* Marges internes */
+    text-align: center; /* Centrage du texte */
+}
+
+.section h2 {
+    color: #003366; /* Couleur du texte des titres */
+}
+
+/* Formulaires */
+.formulaire {
+    max-width: 400px; /* Largeur maximale */
+    margin: 0 auto; /* Centrer horizontalement */
+    text-align: left; /* Alignement à gauche */
+}
+
+.formulaire label {
+    display: block; /* Bloquer les étiquettes */
+    margin-bottom: 0.5rem; /* Espacement en bas */
+    font-weight: bold; /* Texte en gras */
+    color: #003366; /* Couleur des labels */
+}
+
+.formulaire input, .formulaire select {
+    width: 100%; /* Largeur complète */
+    padding: 0.5rem; /* Marges internes */
+    margin-bottom: 1rem; /* Espacement en bas */
+    border: 1px solid #003366; /* Bordure bleue */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+.formulaire button {
+    background-color: #003366; /* Fond bleu marine */
+    color: white; /* Texte blanc */
+    padding: 0.5rem 1rem; /* Marges internes */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Pointeur en main */
+    font-size: 1rem; /* Taille du texte */
+}
+
+.formulaire button:hover {
+    background-color: #00509e; /* Couleur au survol */
+}
+
+/* Offres */
+.offre {
+    border: 1px solid #003366; /* Bordure bleue marine */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 1rem; /* Marges internes */
+    margin: 1rem auto; /* Espacement externe */
+    max-width: 600px; /* Largeur maximale */
+    background-color: #e6f0ff; /* Fond bleu clair */
+}
+/* Styles généraux pour la navigation */
+.navbar {
+    background-color: #0073e6; /* Couleur de fond */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Centrer les liens horizontalement */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre sous la navbar */
+}
+
+.navbar ul {
+    list-style: none; /* Retirer les puces */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none; /* Retirer le soulignement */
+    color: white; /* Couleur du texte */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation lors du survol */
+}
+
+.navbar a:hover {
+    background-color: #005bb5; /* Couleur de fond au survol */
+    color: #f0f0f0; /* Couleur du texte au survol */
+}
+
+/* Styles pour le lien actif (ajoutez une classe "active" à l'élément actif dans la vue) */
+.navbar a.active {
+    background-color: #005bb5; /* Couleur de fond du lien actif */
+    color: #f0f0f0;
+}
+
+/* Navigation responsive */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Liens empilés verticalement */
+        gap: 10px;
+    }
+}
